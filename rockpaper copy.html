@@ -1,0 +1,99 @@
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rock-paper</title>
+</head>
+<body>
+  <p>Rock-paper Scissors</p>
+  <button onclick="
+  const randomNumber = Math.random(); 
+  let computerMove  = '';
+
+  if(randomNumber >=0 && randomNumber < 1/3){
+        computerMove = 'Rock';
+  }
+  else if(randomNumber >= 1/3 && randomNumber < 2/3){
+     computerMove = 'Paper';
+  }else if(randomNumber >=2/3 && randomNumber <1){
+     computerMove = 'Scissors';
+  }
+  console.log(computerMove);
+
+  let result = '';
+  if(computerMove === 'Rock'){
+    result = 'Tie.';
+  }
+  else if(computerMove === 'Paper'){
+    result = 'you lose';
+  }
+  else if(computerMove === 'Scissors'){
+    result = 'you win';
+  }
+
+  alert(`you picked Rock. computer picked ${computerMove}. ${result}
+  ` );
+
+  ";>Rock</button>
+
+  <button onclick="
+  const randomNumber = Math.random(); 
+  let computerMove  = '';
+
+  if(randomNumber >=0 && randomNumber < 1/3){
+        computerMove = 'Rock';
+  }
+  else if(randomNumber >= 1/3 && randomNumber < 2/3){
+     computerMove = 'Paper';
+  }else if(randomNumber >=2/3 && randomNumber <1){
+     computerMove = 'Scissors';
+  }
+  console.log(computerMove);
+
+  let result = '';
+  if(computerMove === 'Rock'){
+    result = 'you win';
+  }
+  else if(computerMove === 'Paper'){
+    result = 'Tie.';
+  }
+  else if(computerMove === 'Scissors'){
+    result = 'you lose';
+  }
+
+  alert(`you picked Paper. computer picked ${computerMove}. ${result}
+  ` );
+  
+  ">Paper</button>
+
+  <button onclick="
+  const randomNumber = Math.random(); 
+  let computerMove  = '';
+
+  if(randomNumber >=0 && randomNumber < 1/3){
+        computerMove = 'Rock';
+  }
+  else if(randomNumber >= 1/3 && randomNumber < 2/3){
+     computerMove = 'Paper';
+  }else if(randomNumber >=2/3 && randomNumber <1){
+     computerMove = 'Scissors';
+  }
+  console.log(computerMove);
+
+  let result = '';
+  if(computerMove === 'Rock'){
+    result = 'you lose';
+  }
+  else if(computerMove === 'Paper'){
+    result = 'you win';
+  }
+  else if(computerMove === 'Scissors'){
+    result = 'Tie.';
+  }
+
+  alert(`you picked Scissors. computer picked ${computerMove}. ${result}
+  ` );
+  ">Scissors</button>
+  <script>
+    
+ </script>
+</body>

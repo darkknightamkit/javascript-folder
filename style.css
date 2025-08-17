@@ -1,0 +1,31 @@
+*{
+   margin:0%;
+   padding:0%
+   
+
+}
+
+html,body{
+  height : 100%;
+  width  : 100%;
+  font-family : 'Poppins' ,sans-serif;
+   box-sizing : border-box;
+}
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg,#656c7c,#4e085f);
+  padding: 10px;
+ 
+}
+.todo-app{
+  height: 100px;
+   width: 80px;
+  object-fit: cover;
+  margin-left: 100px;
+  margin-right: 100px;
+  background: #fff;
+ 
+  border-radius: 10px;
+ 
+} 

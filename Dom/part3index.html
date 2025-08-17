@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM PART3</title>
+</head>
+<body>
+
+  <h1>SEE YOU AT THE MOVIES</h1>
+  <p id="js"></p>
+
+  <button onclick="hey()" id="jss">submit</button>
+  <script>
+    document.addEventListener("mouseenter", hello);
+    function hello() {
+       document.getElementById("js").innerText = "Namaste bacho";
+       
+    }
+    function hey(){
+      document.getElementById("jss").innerText="Namaste";
+      document.getElementById("jss").style.color ="blue";
+      document.getElementById("jss").style.backgroundColor ="pink";
+      document.getElementById("jss").style.padding ="16px";
+      document.getElementById("jss").style.border ="2px solid red";
+    }
+  </script>
+</body>
+</html>

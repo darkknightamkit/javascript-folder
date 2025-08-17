@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | RadhaKrishna Medical Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-br from-green-50 to-blue-100 text-gray-800">
+    <!-- Navbar -->
+    <header class="bg-white shadow-md">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-blue-600">RadhaKrishna</h1>
+        <nav class="space-x-6 text-sm">
+          <a href="index.html" class="hover:text-blue-600 transition-colors duration-300">Home</a>
+          <a href="products.html" class="hover:text-green-600 transition-colors duration-300">Products</a>
+          <a href="upload.html" class="hover:text-purple-600 transition-colors duration-300">Upload Prescription</a>
+          <a href="contact.html" class="text-blue-600 font-medium hover:text-red-600 transition-colors duration-300">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="py-12">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-semibold text-center text-blue-700 mb-10">Contact Us</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <!-- Contact Details -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Store Address</h3>
+            <p>
+              RadhaKrishna Medical Store<br />
+              123 Main Street, Sector 5<br />
+              Mumbai, Maharashtra 400001<br />
+              India
+            </p>
+            <p class="mt-4"><strong>Phone:</strong> +91 9876543210</p>
+            <p><strong>Email:</strong> contact@radhakrishnamedical.com</p>
+            <iframe
+              class="mt-6 w-full h-64 rounded-lg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609920727!2d72.74109881240298!3d19.082522317819713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63d1fd6fda9%3A0xf7e0c4c2c39c1ee0!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1717848652401!5m2!1sen!2sin"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              aria-label="Google Map showing RadhaKrishna Medical Store location in Mumbai"
+              title="Store Location Map"
+            ></iframe>
+          </div>
+
+          <!-- Contact Form -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Send Us a Message</h3>
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/xzzgdnne"
+              method="POST"
+              class="bg-white p-6 rounded-lg shadow-md space-y-4"
+              aria-label="Contact form"
+            >
+              <div>
+                <label for="name" class="block text-sm font-medium mb-1">Your Name</label>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  class="w-full border rounded-md px-3 py-2"
+                  required
+                  aria-required="true"
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  class="w-full border rounded-md px-3 py-2"
+                  required
+                  aria-required="true"
+                />
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-medium mb-1">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="w-full border rounded-md px-3 py-2"
+                  rows="5"
+                  required
+                  aria-required="true"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition"
+                aria-label="Send message"
+              >
+                Send
+              </button>
+            </form>
+            <div
+              id="formMessage"
+              class="mt-4 text-center font-semibold hidden"
+              role="alert"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 text-center">
+      <p>&copy; 2025 RadhaKrishna Medical Store. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const form = document.getElementById('contactForm');
+      const formMessage = document.getElementById('formMessage');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+            Accept: 'application/json',
+          },
+        });
+
+        formMessage.classList.remove('hidden');
+
+        if (response.ok) {
+          formMessage.textContent =
+            'Thank you for contacting us! We will get back to you soon.';
+          form.reset();
+          formMessage.classList.remove('text-red-600');
+          formMessage.classList.add('text-green-600');
+        } else {
+          formMessage.textContent =
+            'Oops! Something went wrong. Please try again later.';
+          formMessage.classList.remove('text-green-600');
+          formMessage.classList.add('text-red-600');
+        }
+      });
+    </script>
+  </body>
+</html>

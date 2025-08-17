@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript - DOM part 2</title>
+</head>
+<body>
+  <ul>
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+  </ul>
+  <script>
+    
+    let title = document.createElement("h1");
+    title.className = "AMIT";
+    title.style.fontSize = "25px";
+    title.textContent= "hare rama rama......";
+    
+    console.log(title);
+    document.body.appendChild(title);
+
+    let ul = document.querySelector("ul");
+    console.log(ul);
+
+    let lis = document.querySelectorAll("li");
+    console.log(lis);
+
+    for(list of lis){
+      ul.removeChild(list);
+    }
+  </script>
+</body>
+</html>

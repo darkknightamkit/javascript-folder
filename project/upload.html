@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Upload Prescription | RadhaKrishna Medical Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Navbar -->
+    <header class="bg-white shadow-md">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-blue-600">RadhaKrishna</h1>
+        <nav class="space-x-6 text-sm">
+          <a href="index.html" class="hover:text-blue-600">Home</a>
+          <a href="products.html" class="hover:text-blue-600">Products</a>
+          <a href="upload.html" class="text-blue-600 font-medium">Upload Prescription</a>
+          <a href="index.html" class="hover:text-blue-600">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Upload Prescription Section -->
+    <section class="max-w-3xl mx-auto px-4 py-12">
+      <h2 class="text-3xl font-semibold text-center text-blue-700 mb-10">
+        Upload Your Prescription
+      </h2>
+
+      <form
+        action="https://formspree.io/f/xzzgdnne"
+        method="POST"
+        enctype="multipart/form-data"
+        class="bg-white p-6 rounded-lg shadow-md space-y-6"
+      >
+        <div>
+          <label class="block text-sm font-medium mb-1" for="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="w-full border rounded-md px-3 py-2"
+            required
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1" for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="w-full border rounded-md px-3 py-2"
+            required
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1" for="prescription"
+            >Prescription File</label
+          >
+          <input
+            type="file"
+            id="prescription"
+            name="prescription"
+            accept="image/*,application/pdf"
+            class="w-full"
+            required
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition"
+        >
+          Upload
+        </button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 text-center">
+      <p>&copy; 2025 RadhaKrishna Medical Store. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

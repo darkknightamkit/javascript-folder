@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM </title>
+</head>
+<body>
+
+  <p id="one">Namaste</p>
+  <ul>
+    <li class="tech">one</li>
+    <li class="tech">two</li>
+    <li class="tech">three</li>
+  </ul>
+
+  <h4>hey Namaste!</h4>
+  <h4>hola</h4>
+  <h4>hare rama......</h4>
+  
+  <!-- Query selector-->
+   <h2>Hello</h2>
+   <h2 class="classs">Hola</h2>
+   <h2 id="ids">hey rama....</h2>
+  <script>
+    let var1 = document.getElementById("one");
+    console.log(var1.innerText);
+    let var2 = document.getElementsByClassName("tech");
+    console.log(var2[1].innerText);
+    var2[1].innerText = "Node js";
+    var2[2].style.color = "blue";
+
+
+
+   let var3 = document.getElementsByTagName("h4");
+   console.log(var3);
+   var3[2].style.color = "red";
+
+   let var4 = document.querySelector(".classs");
+   console.log(var4);
+
+   var4.className = "Tom cruise";
+
+   var4.classList = "hello hell hey";
+   var4.setAttribute("id","amit");
+  </script>
+</body>
+</html>
