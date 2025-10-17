@@ -1,0 +1,73 @@
+*{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+}
+
+html,body{
+   height : 100%;
+   width : 100%;
+}
+body{
+    background: radial-gradient(circle at 30% 30%, #3b004b, transparent 60%),
+            radial-gradient(circle at 70% 70%, #00224f, transparent 60%),
+            radial-gradient(circle at 50% 50%, #ff6a00, transparent 80%),
+            #31078b;
+
+}
+#first{
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  border-right: 2px solid #ff9933; 
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#second{
+  height: 400px;
+  width: 350px;
+  background-color:rgb(118, 114, 106);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5%;
+  left: 35%;
+  right: 30%;
+  bottom: 30%;
+  
+}
+img{
+ height: 100%;
+ width: 100%;
+  border-radius: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  padding: 20px;
+}
+img:hover{
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+#third{
+  height: 50px;
+  width: 350px;
+  background-color:rgb(192, 134, 25);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 55%;
+  left: 35%;
+  right: 30%;
+  bottom: 5%;
+}
+h1:hover{
+  color: #ff9933;
+
+}
+
